@@ -1,0 +1,66 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/somewhat_transparent"
+    android:id="@+id/coordinatorLayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/select_from_gallery_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            ></include>
+
+        <RelativeLayout
+            android:id="@+id/needStoragePermissionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue_100">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="96dp"
+                android:layout_height="128dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="12dp"
+                app:srcCompat="@drawable/contact_empty_2x"
+                tools:src="@drawable/contact_empty_2x"
+                tools:ignore="MissingPrefix"/>
+
+            <TextView android:id="@+id/needStoragePermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="left"
+                android:layout_toRightOf="@id/imageView"
+                android:text="Monument doesn't have permission to take a photo. To enable, tap settings and turn on Storage."
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView android:id="@+id/permissionSettings"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/needStoragePermission"
+                android:layout_marginTop="12dp"
+                android:layout_alignLeft="@id/needStoragePermission"
+                android:text="Go To Settings"
+                android:fontFamily="sans-serif-bold"
+                android:textAppearance="?android:attr/textAppearanceButton"
+                android:textSize="18sp"
+                android:textColor="@color/teal_400"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

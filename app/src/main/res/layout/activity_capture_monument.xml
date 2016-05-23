@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/mainactivity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            ></include>
+
+        <FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <ImageView
+                android:id="@+id/monument_photo"
+                android:src="@drawable/monuments_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                >
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:padding="12dp"
+                    android:text="Save"/>
+
+                <RelativeLayout
+                    android:id="@+id/spinner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/btn_save"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <Spinner
+                        android:id="@+id/type"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        >
+                    </Spinner>
+                    <ImageView
+                        android:id="@+id/type_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_build_black_24dp"
+                        android:tint="@color/accent"/>
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/description_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/spinner_layout"
+                    >
+                    <EditText android:id="@+id/monument_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textCapSentences"
+                        android:hint="Description"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/description_layout"
+                    >
+                    <EditText android:id="@+id/monument_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textCapSentences"
+                        android:hint="Name" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
