@@ -1,10 +1,9 @@
-
 /*
- * MonumentUserDbHandler.java
+ * MonumentDbHandler.java
  * Heyandroid
  *
- * Created by Miroslav Ignjatovic on 2/17/2016
- * Copyright (c) 2015 CommonSun All rights reserved.
+ * Created by Miroslav Ignjatovic on 5/23/2016
+ * Copyright (c) 2016 Novotek All rights reserved.
  */
 
 package novotek.com.monuments.database;
@@ -14,11 +13,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import android.support.v4.util.Pair;
 
 import com.orhanobut.logger.Logger;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;

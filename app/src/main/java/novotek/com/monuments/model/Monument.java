@@ -1,12 +1,16 @@
+/*
+ * Monument.java
+ * Heyandroid
+ *
+ * Created by Miroslav Ignjatovic on 5/23/2016
+ * Copyright (c) 2016 Novotek All rights reserved.
+ */
+
 package novotek.com.monuments.model;
 
 import android.net.Uri;
 
-import novotek.com.monuments.database.MonumentUserDbHandler;
 
-/**
- * Created by BX on 5/23/2016.
- */
 public class Monument {
     String uuid;
     String name;

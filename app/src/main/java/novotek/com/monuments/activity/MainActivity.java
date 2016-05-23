@@ -1,3 +1,11 @@
+/*
+ * MainActivity.java
+ * Heyandroid
+ *
+ * Created by Miroslav Ignjatovic on 5/23/2016
+ * Copyright (c) 2016 Novotek All rights reserved.
+ */
+
 package novotek.com.monuments.activity;
 
 import android.content.Intent;
@@ -34,9 +42,7 @@ import novotek.com.monuments.events.MonumentCreatedEvent;
 import novotek.com.monuments.fragment.MonumentListFragment;
 import novotek.com.monuments.model.Monument;
 
-/**
- * Created by BX on 5/23/2016.
- */
+
 public class MainActivity extends AppCompatActivity {
     private static final int CACHED_FRAGMENT_PAGES = 2;
     public static final String EXTRA_USER_NAME = "userName";

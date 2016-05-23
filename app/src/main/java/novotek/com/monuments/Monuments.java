@@ -1,3 +1,11 @@
+/*
+ * Monuments.java
+ * Heyandroid
+ *
+ * Created by Miroslav Ignjatovic on 5/23/2016
+ * Copyright (c) 2016 Novotek All rights reserved.
+ */
+
 package novotek.com.monuments;
 
 import android.app.Application;
@@ -11,12 +19,8 @@ import com.orhanobut.logger.Logger;
 import java.util.UUID;
 
 import novotek.com.monuments.database.DatabaseHandler;
-import novotek.com.monuments.model.Monument;
 import novotek.com.monuments.model.MonumentUser;
 
-/**
- * Created by BX on 5/23/2016.
- */
 public class Monuments extends Application {
     public static Monuments instance;
     private Context applicationContext;

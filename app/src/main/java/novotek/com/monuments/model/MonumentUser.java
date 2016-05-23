@@ -1,8 +1,13 @@
+/*
+ * MonumentUser.java
+ * Heyandroid
+ *
+ * Created by Miroslav Ignjatovic on 5/23/2016
+ * Copyright (c) 2016 Novotek All rights reserved.
+ */
+
 package novotek.com.monuments.model;
 
-/**
- * Created by BX on 5/22/2016.
- */
 public class MonumentUser {
     Long userId;
     private String userName;

@@ -1,10 +1,9 @@
-
 /*
- * TakePhotoEvent.java
+ * PhotoTakenEvent.java
  * Heyandroid
  *
- * Created by Miroslav Ignjatovic on 4/5/2016
- * Copyright (c) 2015 CommonSun All rights reserved.
+ * Created by Miroslav Ignjatovic on 5/23/2016
+ * Copyright (c) 2016 Novotek All rights reserved.
  */
 
 

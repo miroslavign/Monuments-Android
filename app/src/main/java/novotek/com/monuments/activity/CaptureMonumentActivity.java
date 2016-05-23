@@ -1,3 +1,11 @@
+/*
+ * CaptureMonumentActivity.java
+ * Heyandroid
+ *
+ * Created by Miroslav Ignjatovic on 5/23/2016
+ * Copyright (c) 2016 Novotek All rights reserved.
+ */
+
 package novotek.com.monuments.activity;
 
 import android.app.Activity;
@@ -39,9 +47,7 @@ import novotek.com.monuments.model.Monument;
 import novotek.com.monuments.model.MonumentType;
 import novotek.com.monuments.model.MonumentUser;
 
-/**
- * Created by BX on 5/23/2016.
- */
+
 public class CaptureMonumentActivity extends AppCompatActivity {
 
     private static final String TAG = CaptureMonumentActivity.class.getSimpleName();
