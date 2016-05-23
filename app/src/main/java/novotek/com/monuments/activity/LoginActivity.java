@@ -79,8 +79,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        _emailText.setText("zika@gmail.com");
-        _passwordText.setText("pera");
+        // debug purposes only for speed up
+        //_emailText.setText("zika@gmail.com");
+        //_passwordText.setText("pera");
     }
 
     @Override
