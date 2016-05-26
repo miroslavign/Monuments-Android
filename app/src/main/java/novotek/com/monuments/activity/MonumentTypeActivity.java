@@ -1,6 +1,6 @@
 /*
  * MonumentTypeActivity.java
- * Heyandroid
+ * Monuments-Android
  *
  * Created by Miroslav Ignjatovic on 5/23/2016
  * Copyright (c) 2016 Novotek All rights reserved.
@@ -19,6 +19,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.List;
 
 import butterknife.Bind;
@@ -27,6 +30,7 @@ import novotek.com.monuments.Monuments;
 import novotek.com.monuments.R;
 import novotek.com.monuments.adapter.MonumentTypeListAdapter;
 import novotek.com.monuments.database.MonumentTypeDbHandler;
+import novotek.com.monuments.events.MonumentTypeCreatedEvent;
 import novotek.com.monuments.model.MonumentType;
 
 public class MonumentTypeActivity extends AppCompatActivity {
@@ -60,12 +64,10 @@ public class MonumentTypeActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        //EventBus.getDefault().register(this);
     }
 
     @Override
     public void onStop() {
-        //EventBus.getDefault().unregister(this);
         super.onStop();
     }
 
@@ -75,7 +77,6 @@ public class MonumentTypeActivity extends AppCompatActivity {
         layoutManager.setStackFromEnd(true);
         typeListRecycleView.setLayoutManager(layoutManager);
     }
-
 
     private void gotTypesList(List<MonumentType> alltypes) {
         monumentTypeList = alltypes;
@@ -112,7 +113,8 @@ public class MonumentTypeActivity extends AppCompatActivity {
             monumentTypeList.add(monumentType);
             //adapter.notifyItemInserted(0);
             adapter.notifyDataSetChanged();
-        } else
+            EventBus.getDefault().postSticky(new MonumentTypeCreatedEvent(monumentType));
+    } else
             showSnackbar("Error saving monument type");
     }
 

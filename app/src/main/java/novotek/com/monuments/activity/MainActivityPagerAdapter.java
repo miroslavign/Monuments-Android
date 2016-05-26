@@ -1,7 +1,7 @@
 
 /*
  * MainActivityPagerAdapter.java
- * Heyandroid
+ * Monuments-Android
  *
  * Created by Miroslav Ignjatovic on 1/3/2016
  * Copyright (c) 2015 CommonSun All rights reserved.

@@ -1,6 +1,6 @@
 /*
  * MonumentTypeDbHandler.java
- * Heyandroid
+ * Monuments-Android
  *
  * Created by Miroslav Ignjatovic on 5/23/2016
  * Copyright (c) 2016 Novotek All rights reserved.
@@ -12,9 +12,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.Nullable;
-import android.support.v4.util.Pair;
 import android.text.TextUtils;
-import android.widget.ListView;
 
 import com.orhanobut.logger.Logger;
 
@@ -22,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import novotek.com.monuments.model.MonumentType;
-import novotek.com.monuments.model.MonumentUser;
 
 public class MonumentTypeDbHandler {
     final static String TAG = MonumentTypeDbHandler.class.getSimpleName();

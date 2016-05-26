@@ -1,6 +1,6 @@
 /*
  * CaptureMonumentActivity.java
- * Heyandroid
+ * Monuments-Android
  *
  * Created by Miroslav Ignjatovic on 5/23/2016
  * Copyright (c) 2016 Novotek All rights reserved.
@@ -42,6 +42,7 @@ import novotek.com.monuments.R;
 import novotek.com.monuments.database.MonumentDbHandler;
 import novotek.com.monuments.database.MonumentTypeDbHandler;
 import novotek.com.monuments.events.MonumentCreatedEvent;
+import novotek.com.monuments.events.MonumentTypeCreatedEvent;
 import novotek.com.monuments.events.PhotoTakenEvent;
 import novotek.com.monuments.model.Monument;
 import novotek.com.monuments.model.MonumentType;
@@ -203,6 +204,12 @@ public class CaptureMonumentActivity extends AppCompatActivity {
         monumentName.requestFocus();
         InputMethodManager inputMethodManager = (InputMethodManager)  getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.showSoftInput(monumentName, InputMethodManager.SHOW_FORCED);
+    }
+
+    @Subscribe
+    public void onEvent(MonumentTypeCreatedEvent event) {
+        EventBus.getDefault().removeStickyEvent(event);
+        getMonumentTypes();
     }
 
 }
